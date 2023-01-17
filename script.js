@@ -45,7 +45,11 @@ if(numbers === true){
 if(specialCharacters === true){
   allYesResponses = allYesResponses + specialChars
 }
-console.log(allYesResponses)
+if (allYesResponses === "") {
+  alert ("You must choose at least one character type. Start again.")
+  return
+}
+
 var password = "";
 for (let index = 0; index < passwordLength; index++) {
   // Pick Random Character
